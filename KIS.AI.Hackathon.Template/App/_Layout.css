@@ -1,0 +1,79 @@
+﻿.answer-title {
+    font-weight: bold;
+}
+.answer-content {
+    font-size: 1.2em;
+    padding-bottom: 4px;
+}
+.answer-description {
+    font-size: 0.8em;
+    color: black;
+}
+.glyphicon-thumbs-up, .glyphicon-thumbs-down {
+    cursor: pointer;
+    
+}
+.answers-row {
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 15px;
+}
+#loader {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    margin-right: -35px;
+}
+.spellcheck-container {
+    line-height:20px;
+    vertical-align:middle;
+}
+.highlighted {
+    background-color: mediumspringgreen;
+    color: black;
+}
+.answer-container-smaller {
+    max-height: 60px;
+    overflow: hidden;
+}
+.answer-read-more {
+    color:steelblue;
+    height: 20px;
+    text-align:right;
+    background-color:white;
+    font-size:75%;
+}
+    .answer-read-more .answer-read-more-link {
+        cursor: pointer;
+    }
+    .answer-read-more .answer-read-less-link {
+        cursor: pointer;
+        display:none;
+    }
+.history-items div {
+    margin-bottom:5px;
+}
+.upvoteDiv {
+    display: none;
+    position: absolute;
+    border: solid 2px steelblue;
+    background-color: white;
+    z-index: 1;
+    padding: 10px;
+    right: 50px;
+    top: 25px;
+    width: 350px;
+    height: 185px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+}
+.votebox {
+    height: 50px;
+    width: 325px;
+    margin-bottom: 10px;
+}
+.doneVote {
+    color: lightgray !important;
+}

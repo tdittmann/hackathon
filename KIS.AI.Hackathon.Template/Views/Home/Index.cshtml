@@ -1,0 +1,117 @@
+﻿
+@section Scripts {
+    <script src="~/App/ViewModels/Default.js" type="text/javascript"></script>
+}
+
+
+<div class="container">
+
+    <div class="row">
+        <p></p>
+        <div class="jumbotron">
+            <h1>K-ITSummit2017 Template</h1>
+        </div>
+      
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel-heading">
+                &nbsp;
+            </div>
+        </div>
+ 
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel-heading">
+                <h3 class="panel-title">Bitte Bild Quelle eingeben</h3>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="col-md-11">
+                <span>
+                    <input type="text" class="form-control" placeholder="Eingabefeld" data-bind="textInput: search.input, event: { keyup: search.onEvent }" />
+                </span>
+                <span id="loader"><img src="~/App/loader.gif" /></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+     
+
+      
+            <div class="col-md-3">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Suchergebnis<span data-bind="text: results.question"></span></h3>
+                </div>
+            </div>
+        <!-- row:Answers -->
+
+        <div class="col-md-9">
+            <div class="list-group row answers-row" data-bind="foreach: results.answers">
+                <div class="col-sm-11">
+                    <div class="list-group-item answers-row">
+                        <a class="answer-title" data-bind="text: Title, attr: { 'href': Link }" target="_blank"></a><br />
+                        <div class="answer-content" data-bind="html: Content"></div><br />
+                        <div class="answer-description answer-container-smaller" data-bind="html: Description"></div>
+                        <div class="answer-read-more"><span class="answer-read-less-link answer-read">less...</span><span class="answer-read-more-link answer-read">more...</span></div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    &nbsp;
+                </div>
+            </div>
+
+            <!-- /row:Answers -->
+        </div>
+
+   
+
+
+           
+
+            <div class="row">
+
+
+
+            </div>
+        <div class="row">
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div>
+                    <a href="/Account/Logout">Logout</a>
+                </div>
+
+            }
+        </div>
+        <div class="col-md-12">      
+                <div>
+                    <a href="/Home/Info">Infoseite</a>
+                </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        Version
+        @System.Configuration.ConfigurationManager.AppSettings["Application:Version"]
+    </footer>
+
+</div>
